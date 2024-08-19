@@ -1,0 +1,68 @@
+
+
+
+html {	
+	background-color: rgb(255,213,128);
+}
+body {
+	background-color:  rgb(192,64,0);
+	min-width: 350px;
+	max-width: auto;
+	outline: orange;
+   	
+}
+h1{
+	font:serif
+	color: rgb(255,213,128);
+}
+header{
+	background:orange ;
+}
+menu ul{
+	outline: black
+	
+}
+p{
+	font: serif;
+}
+nav {
+	float: right;
+}
+a:visited {
+color:blue
+}
+
+nav ul {
+	display: inline-block;
+	padding: 10px;
+	list-style: none;
+	margin: 10px;
+}
+.menu ul{
+	padding: 10px;
+	float: right;
+}
+nav li {
+	display: inline-block;
+	text-align: right;
+	margin: 20px
+}
+a:hover{
+	rgb: (0,0,0};
+	
+article ul li:first-of-type { color: red};
+
+footer {
+	color: orange;
+	background-color: rgb(250,250,250);
+	font-size: 0.9em;
+	padding: 10px 0px;
+	text-align: center;
+}
+@media devices
+
+
+
+	
+		
+		
