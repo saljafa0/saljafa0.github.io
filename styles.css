@@ -2,43 +2,68 @@
 
 
 html {	
-	background-color: rgb(211,211,211);
+	background-color: #C1E899;
 }
-main {
-	text-align: center;
-	min-width: 350px;
-	max-width: auto;
-}
+
 h1{
-	font:serif
-	color: rgb(255,213,128);
+	font:serif;
+	color:#C1E899;
 }
 header{
-	background: cyan;
+	background: #062E03;
 	text-align: center ;
 	margin:0;
 	padding:0;
 	padding-top:0;
 	
 }
-nav li {
-	display: inline;
-	text-align: center;
-	margin: 0px auto;
+
 p{
 	font: serif;
 }
-a:visited {
-color:blue 
+
+
+
+/*nav bar*/
+nav{
+	background-color:#55883B
 }
-a:hover{
-	rgb: (0,0,0};
+nav ul{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 10px;
+	margin: 0;
+	
 }
-img{
-	text-align:center;
-	max-width: 70;
-	max-height:auto;
+
+nav li {
+	display: inline-block;
+	text-align: center;
+	margin: 0px auto;
+	padding: 5px;
+	margin: 0 15px;
+	font-size: 1.25em;
 }
+
+
+/*main body styles*/
+body main {
+	text-align: center;
+	min-width: 350px;
+	max-width: auto;
+}
+body main ul{
+	align-items: center;
+}
+	
+/*footer body styles */
+body footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 article ul li:first-of-type { color: red};
 
 footer {
