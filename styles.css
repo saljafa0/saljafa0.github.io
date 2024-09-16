@@ -64,14 +64,6 @@ body footer{
 	flex-direction: column;
 	align-items: center;
 
-article ul li:first-of-type { color: red};
-
 footer {
 }
-@media devices
-
-
-
-	
-		
-		
+@media devices	
