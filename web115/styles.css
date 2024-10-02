@@ -3,7 +3,6 @@ h1{
 	color: rgb(0,0,0);
 	text-align: center;
 	width: 75%;
-	background-color: rgb(0,255,0);
 	margin: 0 auto;
 }
 h2 {
@@ -30,19 +29,18 @@ body{
 	margin: 0px auto;
 	border-color: rgb(0,0,0);
 	padding: 0;
-	background-color: #C1E899;
+	background-color: rgba(0,255,0,0.3);
 	margin: 0 auto;
 	width: 100%;
 }
 main{
-	background-color: rgba(0,230,0,0.6);
+	background-color: rgba(0,215,0,0.6);
 	border: solid rgb(0,120,0);
 	border-radius: 20px;
 	margin: 25px auto;
 	width: 1250px;
 	text-align: left;
 	font-size: 1.2em;
-	padding: 5px;
 }
 /*anchor styles*/
 a{
@@ -52,4 +50,6 @@ a{
 a:hover{
 	color: rgb(0,255,0);
 }
-/* img styles */
+footer{
+	text-align: center;
+}
