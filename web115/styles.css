@@ -1,6 +1,6 @@
 h1{
 	font-family:serif;
-	color: rgb(0,0,0);
+	color: rgb(0,120,0);
 	text-align: center;
 	width: 75%;
 	margin: 0 auto;
@@ -12,19 +12,17 @@ p{
 	font-family: serif;
 }
 /*nav bar*/
-nav {
-	display: block;
+nav ul{
 	margin:0 auto;
-	padding: 5px;
 	text-align: center;
 	background-color: rgba(0,170,0,.4);
 	border-radius: 20px;
 	width: 75%;
 	font-size: 1.1em;
-	list-style: none;
+	list-style-type: none;
 }
 
-/*main body styles*/
+/*body styles*/
 body{
 	margin: 0px auto;
 	border-color: rgb(0,0,0);
@@ -32,6 +30,12 @@ body{
 	background-color: rgba(0,255,0,0.3);
 	margin: 0 auto;
 	width: 100%;
+}
+header, footer {
+	width: 100%;
+	margin: 0 auto;
+	color: rgba(0,215,0,0.6);
+	text-align: center;
 }
 main{
 	background-color: rgba(0,215,0,0.6);
@@ -50,6 +54,4 @@ a{
 a:hover{
 	color: rgb(0,255,0);
 }
-footer{
-	text-align: center;
-}
+
