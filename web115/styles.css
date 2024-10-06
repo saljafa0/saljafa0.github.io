@@ -30,6 +30,7 @@ body{
 	background-color: rgba(0,255,0,0.3);
 	margin: 0 auto;
 	width: 100%;
+	box-sizing: border-box;
 }
 header, footer {
 	width: 100%;
@@ -38,13 +39,14 @@ header, footer {
 	text-align: center;
 }
 main{
+	box-sizing: border-box;
 	background-color: rgba(0,215,0,0.6);
 	border: solid rgb(0,120,0);
 	border-radius: 20px;
 	margin: 25px auto;
-	width: 1250px;
 	text-align: left;
 	font-size: 1.2em;
+	width: 75%;
 }
 /*anchor styles*/
 a{
