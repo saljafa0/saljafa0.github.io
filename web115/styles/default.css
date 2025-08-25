@@ -2,12 +2,13 @@ body{
 	margin: 0px auto;
 	border-color: rgb(0,0,0);
 	padding: 0;
-	background-color: rgba(0,255,0,0.3);
+	background-color: rgba(79,121,66);
 	margin: 0 auto;
 	width: 100%;
-	box-sizing: border-box;}
+	box-sizing: border-box;
+}
 
-li{
+header {
 	margin:0 auto;
 	text-align: center;
 	background-color: rgba(0,170,0,.4);
@@ -15,4 +16,25 @@ li{
 	width: 75%;
 	font-size: 1.1em;
 	list-style-type: none;
+}
+
+footer {
+	margin:0 auto;
+	text-align: center;
+	background-color: rgba(0,170,0,.4);
+	border-radius: 20px;
+	width: 75%;
+	font-size: 1.1em;
+	list-style-type: none;
+}
+
+.nav-links {
+	display: flex;
+	gap:20px;
+	justify-content: center;
+}
+
+.nav-links a {
+	color: rgba(5,71,42);
+	font-weight: bold;
 }
