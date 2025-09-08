@@ -5,7 +5,7 @@ body{
 	background-color: rgba(79,121,66);
 	margin: 0 auto;
 	width: 100%;
-	box-sizing: border-box;
+	box-sizing: border-box; 
 }
 
 header {
@@ -17,7 +17,10 @@ header {
 	font-size: 1.1em;
 	list-style-type: none;
 }
-
+main {
+	padding: 10%;
+	padding-top: 5%;
+}
 footer {
 	margin:0 auto;
 	text-align: center;
@@ -37,4 +40,5 @@ footer {
 .nav-links a {
 	color: rgba(5,71,42);
 	font-weight: bold;
+	text-decoration: none;
 }
