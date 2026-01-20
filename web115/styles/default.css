@@ -39,11 +39,11 @@ nav {
 }
 
 a {
-	color: rgba(34,139,34);
+	color: rgb(26, 71, 15);
 	font-weight: bold;
 	text-decoration: none;
 }
 
 a:hover {
-	color: rgb(0,100,0)
+	color: rgba(150, 86, 14, 0.904)
 }
