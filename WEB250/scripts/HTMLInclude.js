@@ -1,36 +1,33 @@
+// Sammy Al-Jafari 1/26/2026
 
+// HTMLInclude.js
+// A simple script to include HTML snippets into a webpage
 
+//======Waits for the DOM to be fully loaded======
+document.addEventListener("DOMContentLoaded", () => {
+    
+    //======Find all elements with the 'data-include-html' attribute======
+    document.querySelectorAll("[data-include-html]").forEach(async (element) => {
+        
+        // =====Get the file path from the attribute======
+        const filePath = element.getAttribute("data-include-html");
+        
+        try {
+            //======Fetch the HTML content from the specified file======
+            const response = await fetch(filePath);
 
-// Simple HTML include loader that watches the DOM and injects files from ../components/
-// Usage: <div data-include="header.html"></div> or <div data-include="header"></div>
-
-(function () {
-    const scriptSrc = (document.currentScript && document.currentScript.src) ||
-        (Array.from(document.getElementsByTagName('script')).pop() || {}).src || location.href;
-    const componentsBase = new URL('../components/', scriptSrc).href;
-
-    async function fetchHtml(url) {
-        const res = await fetch(url, { cache: 'no-cache' });
-        if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-        return await res.text();
-    }
-
-    function executeScripts(container, baseUrl) {
-        const scripts = Array.from(container.querySelectorAll('script'));
-        scripts.forEach(orig => {
-            const s = document.createElement('script');
-            // copy attributes
-            for (let i = 0; i < orig.attributes.length; i++) {
-                const a = orig.attributes[i];
-                if (a.name === 'src') {
-                    const srcUrl = new URL(a.value, baseUrl).href;
-                    s.src = srcUrl;
-                } else {
-                    s.setAttribute(a.name, a.value);
-                }  
+            // if file not found, throw an error
+            if (!response.ok) {
+                throw new Error(`Could not load ${filePath} `);
             }
-            s.text = orig.text;
-            orig.parentNode.replaceChild(s, orig);
-        });
-    }
-})();
+            
+            //======Insert the fetched HTML content into the element======
+            element.innerHTML = await response.text();
+
+        } catch (error) {
+            //======Handle errors (e.g., file not found)======
+            element.innerHTML = "Page not found.";
+            console.error(error);
+        }
+    });
+;});
