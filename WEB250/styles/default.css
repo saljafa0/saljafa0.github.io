@@ -57,6 +57,11 @@ p {
     margin-bottom: 1rem;
 }
 
+ol {
+    list-style-type: circle;   
+    margin-left: 2rem;         
+    padding-left: 1rem;        
+}
 /*=======  FOOTER  =====*/
 footer {
     text-align: center;
