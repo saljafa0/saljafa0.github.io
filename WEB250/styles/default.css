@@ -20,10 +20,15 @@ main, header, footer {
 }
 
 /*=======  HEADER , NAVIGATION  =====*/
+header {
+    border-bottom: 1px solid #ccc;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 1rem;
 }
+
 
 /*=======  NAVIGATION  =====*/
 nav {
