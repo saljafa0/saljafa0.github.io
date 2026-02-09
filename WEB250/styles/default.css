@@ -77,8 +77,9 @@ footer {
 
 footer nav {
     display: flex;
+    flex-wrap: nowrap; /* Keep links in one line */;
     justify-content: center;
-    flex-direction: column nowrap;
+    flex-direction: row;
     margin-bottom: 0.5rem;
 }
 
