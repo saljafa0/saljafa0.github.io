@@ -10,14 +10,13 @@ function makeGreeting() {
     if (middleName === "") {
         fixedMiddleName = "";
     } else {
-        fixedMiddleName = middleName + ". ";
+        fixedMiddleName = middleName + ". " //add a period and space after the middle initial if it's not empty;
     }
 
     let fullName = `${firstName} ${fixedMiddleName}${lastName}`;
     //shows something if first or last name is empty, otherwise it will show the greeting message with the full name
     if (firstName === "" || lastName === "") {
         fullName = "Valued Guest";
-        return;
     }
 
     // Create the greeting message
@@ -27,7 +26,7 @@ function makeGreeting() {
     document.getElementById("greeting").textContent = newGreeting;
 
     //call the loop function to run the loop challenge
-    runNumLoop(firstName);
+    runNumLoop(firstName || "Valued Guest");
 }
     //=======LOOP CHALLENGE STARTS HERE========
 
@@ -36,7 +35,7 @@ function runNumLoop(firstName) {
     let limit = prompt(`Please enter a number count, ${firstName}: `);
     //Validate the input case for empty string,spaces, or non-numeric value 
     if (limit === "" || isNaN(limit)) {
-        alert("Please enter a valid number.");
+        alert("Please enter a valid number. no spaces, letters, or empty input allowed.");
         return;
     }
 
