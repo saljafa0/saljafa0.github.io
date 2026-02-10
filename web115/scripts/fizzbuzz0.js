@@ -7,7 +7,7 @@ function makeGreeting() {
 
     //omit middle name if it's empty
     fixedMiddleName = "";
-    if (middleName == "") {
+    if (middleName === "") {
         fixedMiddleName = "";
     } else {
         fixedMiddleName = middleName + " ";
@@ -38,14 +38,14 @@ function makeGreeting() {
     let listItems = "";
     for (let i = 1; i <= limit; i++) {
         let evenOdd = (i % 2 === 0) ? "even" : "odd";
-        listItems += `<li>${i} is ${evenOdd}</li>`;
+        listItems += `<li>${i} Glazed Glory is ${evenOdd}</li>`;
     }
     loopElement.innerHTML = listItems;
 
 
      
     // Prevent the form from submitting and refreshing the page
-    const form = document.getElementById("fizzbuzz0");
+    const form = document.getElementById("name-form");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         makeGreeting();
