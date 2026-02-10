@@ -31,9 +31,9 @@ function makeGreeting() {
     const middleName = document.getElementById("middle-name").value.trim();
     const lastName = document.getElementById("last-name").value.trim();
 
-    //omit middle name if it's empty
+    //omit middle name if it's empty and add period after if not
     let fixedMiddleName = "";
-    if (middleName === "") {
+    if (middleName !== "") {
         fixedMiddleName = middleName + ". ";
     } 
 
