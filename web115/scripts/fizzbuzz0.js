@@ -10,7 +10,7 @@ function makeGreeting() {
     if (middleName === "") {
         fixedMiddleName = "";
     } else {
-        fixedMiddleName = middleName + " ";
+        fixedMiddleName = middleName + ". ";
     }
 
     // Create the greeting message
@@ -24,7 +24,7 @@ function makeGreeting() {
 
 
     // Prompt user to enter a number
-    let limit = parseInt(prompt(`Please enter a number count ${firstName}: `));
+    let limit = prompt(`Please enter a number count, ${firstName}: `);
     //Validate the input
     if (limit === "" || isNaN(limit)) {
         alert("Please enter a valid number.");
@@ -42,12 +42,11 @@ function makeGreeting() {
     }
     loopElement.innerHTML = listItems;
 
-
-     
-    // Prevent the form from submitting and refreshing the page
-    const form = document.getElementById("name-form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        makeGreeting();
-    });
 }
+
+// Prevent the form from submitting and refreshing the page
+const form = document.getElementById("name-form");
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    makeGreeting();
+    });
