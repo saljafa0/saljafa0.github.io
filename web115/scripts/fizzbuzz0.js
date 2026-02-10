@@ -41,8 +41,11 @@ function makeGreeting() {
 
     let fullName = `${firstName} ${fixedMiddleName}${lastName}`.trim(); //combine the names into a full name and trim any extra spaces
     //shows something if first or last name is empty, otherwise it will show the greeting message with the full name
-    if (firstName === "" || lastName === "") {
+    if (firstName === "" && lastName === "") {
         fullName = "Valued Guest";
+    } else {
+        let fixedMiddleName = middleName ? middleName + '. ' : ''; //use a ternary operator to check if middle name is empty and add a period and space if it's not
+        fullName = `${firstName} ${fixedMiddleName}${lastName}`.trim();
     }
 
     // Create the greeting message
@@ -52,7 +55,7 @@ function makeGreeting() {
     document.getElementById("greeting").textContent = newGreeting;
 
     //call the loop function to run the loop challenge and give correct name to the prompt
-    runNumLoop(firstName || "Valued Guest");
+    runNumLoop(fullName);
 }
 //=======HTML greeting SCRIPT ENDS HERE========
 
