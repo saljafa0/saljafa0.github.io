@@ -14,10 +14,10 @@ function makeGreeting() {
     }
 
     // Create the greeting message
-    const greeting = `Welcome to Wild Wood Furniture, ${firstName} ${fixedMiddleName}${lastName}!`;
+    const newGreeting = `Welcome to Wild Wood Furniture, ${firstName} ${fixedMiddleName}${lastName}!`;
 
     // Replace the content of the greeting element with the new greeting message
-    document.getElementById("greeting").textContent = greeting;
+    document.getElementById("greeting").textContent = newGreeting;
 
 
     //=======LOOP CHALLENGE STARTS HERE========
