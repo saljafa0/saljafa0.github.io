@@ -13,8 +13,15 @@ function makeGreeting() {
         fixedMiddleName = middleName + ". ";
     }
 
+    let fullName = `${firstName} ${fixedMiddleName}${lastName}`;
+    //shows something if first or last name is empty, otherwise it will show the greeting message with the full name
+    if (firstName === "" || lastName === "") {
+        fullName = "Valued Guest";
+        return;
+    }
+
     // Create the greeting message
-    const newGreeting = `Welcome to Wild Wood Furniture, ${firstName} ${fixedMiddleName}${lastName}!`;
+    const newGreeting = `Welcome to Wild Wood Furniture, ${fullName}!`;
 
     // Replace the content of the greeting element with the new greeting message
     document.getElementById("greeting").textContent = newGreeting;
@@ -33,7 +40,7 @@ function runNumLoop(firstName) {
         return;
     }
 
-    // Get the loop element
+    // Get the loop element which is an unordered list in the HTML where we will append the list items created in the loop
     const loopElement = document.getElementById("loop");
 
     // Create list items for each number from 1 to the entered number using loop and determine if it's even or odd using modulus operator
