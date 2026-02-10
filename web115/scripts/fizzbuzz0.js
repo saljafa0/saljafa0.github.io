@@ -20,6 +20,11 @@ function runNumLoop(fullName) {
     loopElement.innerHTML = listItems;
 
 }
+
+
+//=======LOOP CHALLENGE ENDS HERE========
+
+//=======HTML greeting SCRIPT STARTS HERE========
 function makeGreeting() {
     // Get the values from the input fields
     const firstName = document.getElementById("first-name").value.trim();
@@ -49,11 +54,11 @@ function makeGreeting() {
     //call the loop function to run the loop challenge and give correct name to the prompt
     runNumLoop(firstName || "Valued Guest");
 }
+//=======HTML greeting SCRIPT ENDS HERE========
 
 
 
-
-// Prevent the form from submitting and refreshing the page
+// Prevent the form from submitting and refreshing the page and call the makeGreeting function when the form is submitted
 const form = document.getElementById("name-form");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
