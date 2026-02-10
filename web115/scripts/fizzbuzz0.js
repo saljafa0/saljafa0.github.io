@@ -38,7 +38,7 @@ function makeGreeting() {
     let listItems = "";
     for (let i = 1; i <= limit; i++) {
         let evenOdd = (i % 2 === 0) ? "even" : "odd";
-        listItems += `<li>${i} Glazed Glory is ${evenOdd}</li>`;
+        listItems += `<li>${i} Glazed Glory - The number is ${evenOdd}</li>`;
     }
     loopElement.innerHTML = listItems;
 
