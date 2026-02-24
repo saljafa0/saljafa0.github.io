@@ -4,9 +4,11 @@
 //
 function makeThemeNumList() {
 
-    // list of themed words to use in the loop for numbers to be paired with
+    // list of themed words to use in the loop for numbers to be paired with can be expanded or changed as needed
     const wordTheme = ["Glazed", "Crafted", "Sculpture"];
     const list = document.getElementById("loop");
+
+    list.innerHTML = ""; // Clear the list before adding new items
 
 
     //===Loop to make the numbered list with themed words===
@@ -22,7 +24,9 @@ function makeThemeNumList() {
             output = `${i} ${wordTheme[1]}`;
         } else if (i % 5 === 0) {
             output = `${i} ${wordTheme[2]}`;
-        } 
+        } else {
+            output = `${i} ${themeWord[0]}`;
+        }
 
         // Create a list item element and set its text content to the current number and themed word
         const listItem = document.createElement("li");
