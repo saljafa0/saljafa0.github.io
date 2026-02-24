@@ -16,7 +16,7 @@ function makeThemeNumList() {
         const themeWord = wordTheme[(i-1) % wordTheme.length];
         let output = `${i} ${themeWord}`;
         
-        //custom word for multiples of 3, 5, and both
+        //custom word for multiples of 3, 5, and both \also the recurring theme
         if (i % 3 === 0 && i % 5 === 0) {
             const combinedWord = `${wordTheme[1]} ${wordTheme[2]}`;
             output = `${i} ${combinedWord}`;
@@ -24,16 +24,15 @@ function makeThemeNumList() {
             output = `${i} ${wordTheme[1]}`;
         } else if (i % 5 === 0) {
             output = `${i} ${wordTheme[2]}`;
-        } else {
-            output = `${i} ${themeWord[0]}`;
-        }
+        }  
+    }
 
         // Create a list item element and set its text content to the current number and themed word
         const listItem = document.createElement("li");
         listItem.textContent = output;
         list.appendChild(listItem);
-    }
 }
+
 
 
 
