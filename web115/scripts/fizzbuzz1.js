@@ -5,7 +5,7 @@
 function makeThemeNumList() {
 
     // list of themed words to use in the loop for numbers to be paired with
-    const wordTheme = ["Glazed Wood", "Dragon Crafted", "Sculpture"];
+    const wordTheme = ["Glazed", "Crafted", "Sculpture"];
     const list = document.getElementById("loop");
 
 
