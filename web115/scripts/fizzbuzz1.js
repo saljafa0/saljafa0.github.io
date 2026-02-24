@@ -16,13 +16,14 @@ function makeThemeNumList() {
         
         //custom word for multiples of 3, 5, and both
         if (i % 3 === 0 && i % 5 === 0) {
-            output += " - FizzBuzz";    
+            const combinedWord = `${wordTheme[1]} ${wordTheme[2]}`;
+            output = `${i} ${combinedWord}`;
         } else if (i % 3 === 0) {
-            output += " - Fizz";
+            output = `${i} ${wordTheme[1]}`;
         } else if (i % 5 === 0) {
-            output += " - Buzz";
+            output = `${i} ${wordTheme[2]}`;
         } 
-        
+
         // Create a list item element and set its text content to the current number and themed word
         const listItem = document.createElement("li");
         listItem.textContent = output;
