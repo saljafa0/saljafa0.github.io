@@ -13,7 +13,7 @@ function makeThemeNumList() {
 
     //===Loop to make the numbered list with themed words===
     for (let i = 1; i <= 140; i++) {
-        let output = `${i} ${themeWord[0]}`;
+        let output = `${i} ${wordTheme[0]}`;
         
         //custom word for multiples of 3, 5, and both \also the recurring theme
         if (i % 3 === 0 && i % 5 === 0) {
