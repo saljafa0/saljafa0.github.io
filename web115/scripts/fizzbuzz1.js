@@ -2,19 +2,31 @@
 // 1. create numbered list from 1 to 140 with each line have a themed word, start it with name submit
 //
 //
-function makeNumList() {
+function makeThemeNumList() {
 
     // list of themed words to use in the loop for numbers to be paired with
     const wordTheme = ["Glazed Wood", "Dragon Crafted", "Sculpture"];
+    const list = document.getElementById("loop");
+
+
     //===Loop to make the numbered list with themed words===
     for (let i = 1; i <= 140; i++) {
-        const themeWord = wordTheme[i % wordTheme.length];
-
+        const themeWord = wordTheme[(i-1) % wordTheme.length];
+        let output = `${i} ${themeWord}`;
+        
         //custom word for multiples of 3, 5, and both
         if (i % 3 === 0 && i % 5 === 0) {
-            console.log(`${i} ${themeWord} - FizzBuzz`);
-
-        }
+            output += " - FizzBuzz";    
+        } else if (i % 3 === 0) {
+            output += " - Fizz";
+        } else if (i % 5 === 0) {
+            output += " - Buzz";
+        } 
+        
+        // Create a list item element and set its text content to the current number and themed word
+        const listItem = document.createElement("li");
+        listItem.textContent = output;
+        list.appendChild(listItem);
     }
 }
 
@@ -49,8 +61,8 @@ function makeGreeting() {
     // Replace the content of the greeting element with the new greeting message
     document.getElementById("greeting").textContent = newGreeting;
 
-    // call makNumList function to run the loop challenge 
-    makeNumList();
+    // call makeThemeNumList function to run the loop challenge 
+    makeThemeNumList();
 }
 
 
