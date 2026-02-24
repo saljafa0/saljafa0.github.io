@@ -25,14 +25,14 @@ function makeThemeNumList() {
         } else if (i % 5 === 0) {
             output = `${i} ${wordTheme[2]}`;
         }  
-    }
+        
 
         // Create a list item element and set its text content to the current number and themed word
         const listItem = document.createElement("li");
         listItem.textContent = output;
         list.appendChild(listItem);
+    }
 }
-
 
 
 
