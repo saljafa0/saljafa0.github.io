@@ -1,0 +1,109 @@
+
+
+html {
+    font-size: 16px; /* Base size for scaling */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #222;
+    padding: 0 1rem; /* Small padding on mobile */
+}
+
+
+main, header, footer {
+    max-width: 900px; /* Keeps content centered and readable */
+    margin: auto;
+    padding: 1rem;
+}
+
+/*=======  HEADER , NAVIGATION  =====*/
+header {
+    border-bottom: 1px solid #ccc;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/*=======  NAVIGATION  =====*/
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: center;
+    gap: 1rem; /* Space between links */
+    margin-bottom: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005bbb;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+nav a:hover {
+    background: #e0e0e0;
+}
+
+/*=======  MAIN CONTENT  =====*/
+   
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ol {
+    list-style-type: circle;   
+    margin-left: 2rem;         
+    padding-left: 1rem;        
+}
+/*=======  FOOTER  =====*/
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: nowrap; /* Keep links in one line */;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/*===========RESPONSIVE DESIGN===========*/
+    
+/* Medium screens (tablets) */
+@media (min-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    nav {
+        gap: 1.5rem;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 900px) {
+    html {
+        font-size: 18px; /* Slightly larger text on big screens */
+    }
+}
