@@ -67,6 +67,16 @@ ol {
     margin-left: 2rem;         
     padding-left: 1rem;        
 }
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+blockquote {
+    display: flex;
+    justify-content: center;
+}
 /*=======  FOOTER  =====*/
 footer {
     text-align: center;
