@@ -68,15 +68,13 @@ ol {
     padding-left: 1rem;        
 }
 
-figure {
+figure blockquote{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-blockquote {
-    display: flex;
-    justify-content: center;
-}
+
 /*=======  FOOTER  =====*/
 footer {
     text-align: center;
