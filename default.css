@@ -31,7 +31,12 @@ h2 {
 	justify-content: right;
 	
 }
+p {
+	display: grid;
+	justify content: left;
+}
 nav {
+	display: grid;
 	justify-content: right;
     margin-top: 2rem;
     padding-top: 1rem;
